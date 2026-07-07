@@ -1,0 +1,3 @@
+SELECT *
+FROM movies
+WHERE title IN ('Showtime', 'Love Actually', 'The Fighter'); -- Select all movies with the given titles
