@@ -1,0 +1,3 @@
+SELECT *
+FROM movies
+ORDER BY renting_price; -- Order the movies by increasing renting price
