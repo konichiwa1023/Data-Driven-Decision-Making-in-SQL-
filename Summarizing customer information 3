@@ -1,0 +1,2 @@
+SELECT COUNT(DISTINCT country) -- Count the number of countries
+FROM customers;
