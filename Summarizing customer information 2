@@ -1,0 +1,3 @@
+SELECT COUNT(*)   -- Count the total number of customers
+FROM customers
+WHERE country = 'Germany'; -- Select all customers from Germany
