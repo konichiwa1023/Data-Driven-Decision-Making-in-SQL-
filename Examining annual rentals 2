@@ -1,0 +1,5 @@
+SELECT 
+    COUNT(*), -- Count the total number of rented movies
+    AVG(rating) -- Add the average rating
+FROM renting
+WHERE date_renting >= '2019-01-01';
