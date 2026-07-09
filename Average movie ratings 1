@@ -1,0 +1,4 @@
+SELECT movie_id,
+       AVG(rating)  -- Calculate average rating per movie
+FROM renting
+GROUP BY movie_id;
