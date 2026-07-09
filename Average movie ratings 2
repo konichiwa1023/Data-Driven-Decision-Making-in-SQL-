@@ -1,0 +1,6 @@
+SELECT movie_id, 
+       AVG(rating) AS avg_rating,          -- Use alias avg_rating
+       COUNT(rating) AS number_rating,     -- Number of ratings
+       COUNT(*) AS number_renting          -- Number of movie rentals
+FROM renting
+GROUP BY movie_id;
