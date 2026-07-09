@@ -1,0 +1,7 @@
+SELECT DISTINCT m.title,  -- Create a list of movie titles
+       a.name             -- and actor names
+FROM actsin AS ai
+LEFT JOIN movies AS m
+ON m.movie_id = ai.movie_id
+LEFT JOIN actors AS a
+ON a.actor_id = ai.actor_id;
