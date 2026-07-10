@@ -1,0 +1,4 @@
+SELECT *
+FROM renting AS r
+INNER JOIN movies AS m -- Choose the correct join statement
+ON r.movie_id = m.movie_id;
