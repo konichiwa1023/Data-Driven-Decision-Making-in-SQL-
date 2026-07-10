@@ -1,0 +1,7 @@
+SELECT 
+    SUM(m.renting_price),          -- Get the revenue from movie rentals
+    COUNT(*),                      -- Count the number of rentals
+    COUNT(DISTINCT r.customer_id)  -- Count the number of customers
+FROM renting AS r
+LEFT JOIN movies AS m
+ON r.movie_id = m.movie_id;
