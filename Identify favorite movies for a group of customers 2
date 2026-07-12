@@ -1,0 +1,8 @@
+SELECT *
+FROM renting AS r
+LEFT JOIN customers AS c
+ON c.customer_id = r.customer_id
+LEFT JOIN movies AS m
+ON m.movie_id = r.movie_id
+WHERE c.date_of_birth >= '1970-01-01'
+  AND c.date_of_birth < '1980-01-01'; -- Select customers born in the 70s
