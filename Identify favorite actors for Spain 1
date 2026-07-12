@@ -1,0 +1,8 @@
+SELECT *
+FROM renting AS r
+LEFT JOIN customers AS c  -- Augment table renting with information about customers
+ON r.customer_id = c.customer_id
+LEFT JOIN actsin AS ai    -- Augment the table renting with the table actsin
+ON r.movie_id = ai.movie_id
+LEFT JOIN actors AS a     -- Augment table renting with information about actors
+ON ai.actor_id = a.actor_id;
