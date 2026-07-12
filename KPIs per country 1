@@ -1,0 +1,7 @@
+SELECT *
+FROM renting AS r -- Augment the table renting with information about customers
+LEFT JOIN customers AS c
+ON r.customer_id = c.customer_id
+LEFT JOIN movies AS m -- Augment the table renting with information about movies
+ON r.movie_id = m.movie_id
+WHERE r.date_renting >= '2019-01-01'; -- Select only records about rentals since the beginning of 2019
