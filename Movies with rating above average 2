@@ -1,0 +1,7 @@
+SELECT movie_id,        -- Select movie IDs and calculate the average rating
+       AVG(rating)
+FROM renting
+GROUP BY movie_id
+HAVING AVG(rating) >    -- Of movies with rating above average
+    (SELECT AVG(rating)
+     FROM renting);
