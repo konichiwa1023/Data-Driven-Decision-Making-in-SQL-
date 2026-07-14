@@ -1,0 +1,4 @@
+-- Count movie rentals of customer 45
+SELECT COUNT(*)
+FROM renting AS r
+WHERE customer_id = 45;
