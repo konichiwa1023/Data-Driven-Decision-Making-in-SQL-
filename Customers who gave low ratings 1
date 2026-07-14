@@ -1,0 +1,4 @@
+-- Calculate the minimum rating of customer with ID 7
+SELECT MIN(rating)
+FROM renting
+WHERE customer_id = 7;
