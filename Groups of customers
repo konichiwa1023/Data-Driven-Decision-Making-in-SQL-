@@ -1,0 +1,6 @@
+SELECT gender,
+       country,
+       COUNT(*)
+FROM customers
+GROUP BY CUBE (gender, country)
+ORDER BY country;
