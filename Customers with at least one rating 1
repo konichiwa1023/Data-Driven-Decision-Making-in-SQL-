@@ -1,0 +1,4 @@
+-- Select all records of movie rentals from customer with ID 115
+SELECT *
+FROM renting
+WHERE customer_id = 115;
