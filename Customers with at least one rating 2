@@ -1,0 +1,4 @@
+SELECT *
+FROM renting
+WHERE rating IS NOT NULL -- Exclude those with null ratings
+AND customer_id = 115;
