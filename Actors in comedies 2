@@ -1,0 +1,6 @@
+SELECT *
+FROM actsin AS ai
+LEFT JOIN movies AS m
+ON m.movie_id = ai.movie_id
+WHERE m.genre = 'Comedy'
+AND ai.actor_id = 1; -- Select only the actor with ID 1
