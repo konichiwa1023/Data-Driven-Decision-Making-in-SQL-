@@ -1,0 +1,5 @@
+SELECT *  -- Select the records from the table `actsin` of all actors who play in a Comedy
+FROM actsin AS ai
+LEFT JOIN movies AS m
+ON ai.movie_id = m.movie_id
+WHERE m.genre = 'Comedy';
