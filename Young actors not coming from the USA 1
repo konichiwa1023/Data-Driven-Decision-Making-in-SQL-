@@ -1,0 +1,5 @@
+SELECT name, 
+       nationality, 
+       year_of_birth
+FROM actors
+WHERE nationality <> 'USA';
