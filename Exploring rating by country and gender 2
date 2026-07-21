@@ -1,0 +1,9 @@
+SELECT 
+    c.country, 
+    c.gender,
+    AVG(r.rating)
+FROM renting AS r
+LEFT JOIN customers AS c
+ON r.customer_id = c.customer_id
+GROUP BY c.country, c.gender
+ORDER BY c.country, c.gender;
