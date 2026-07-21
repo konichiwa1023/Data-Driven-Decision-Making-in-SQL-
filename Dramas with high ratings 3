@@ -1,0 +1,9 @@
+SELECT movie_id
+FROM movies
+WHERE genre = 'Drama'
+AND movie_id IN (
+    SELECT movie_id
+    FROM renting
+    GROUP BY movie_id
+    HAVING AVG(rating) > 9
+);
