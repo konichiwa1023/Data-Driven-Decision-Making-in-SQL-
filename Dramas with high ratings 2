@@ -1,0 +1,4 @@
+SELECT movie_id
+FROM renting
+GROUP BY movie_id
+HAVING AVG(rating) > 9;
