@@ -1,0 +1,12 @@
+SELECT 
+    c.country,          -- Select country
+    m.genre,            -- Select genre
+    AVG(r.rating),      -- Average ratings
+    COUNT(*)            -- Count number of movie rentals
+FROM renting AS r
+LEFT JOIN movies AS m
+ON m.movie_id = r.movie_id
+LEFT JOIN customers AS c
+ON r.customer_id = c.customer_id
+GROUP BY c.country, m.genre -- Aggregate for each country and each genre
+ORDER BY c.country, m.genre;
