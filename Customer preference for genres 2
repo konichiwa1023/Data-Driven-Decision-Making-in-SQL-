@@ -1,0 +1,11 @@
+SELECT *
+FROM renting AS r
+LEFT JOIN movies AS m
+ON m.movie_id = r.movie_id
+WHERE r.movie_id IN ( -- Select records of movies with at least 4 ratings
+    SELECT movie_id
+    FROM renting
+    GROUP BY movie_id
+    HAVING COUNT(rating) >= 4
+)
+AND r.date_renting >= '2018-04-01'; -- Select records of movie rentals since 2018-04-01
