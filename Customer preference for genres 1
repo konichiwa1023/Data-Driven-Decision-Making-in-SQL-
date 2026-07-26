@@ -1,0 +1,4 @@
+SELECT *
+FROM renting AS r
+LEFT JOIN movies AS m
+ON r.movie_id = m.movie_id;
