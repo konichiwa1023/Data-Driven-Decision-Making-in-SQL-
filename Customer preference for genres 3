@@ -1,0 +1,15 @@
+SELECT m.genre, -- For each genre, calculate:
+       AVG(r.rating) AS avg_rating, -- The average rating and use the alias avg_rating
+       COUNT(r.rating) AS n_rating, -- The number of ratings and use the alias n_rating
+       COUNT(*) AS n_rentals, -- The number of movie rentals and use the alias n_rentals
+       COUNT(DISTINCT r.movie_id) AS n_movies -- The number of distinct movies and use the alias n_movies
+FROM renting AS r
+LEFT JOIN movies AS m
+ON m.movie_id = r.movie_id
+WHERE r.movie_id IN ( 
+    SELECT movie_id
+    FROM renting
+    GROUP BY movie_id
+    HAVING COUNT(rating) >= 3)
+AND r.date_renting >= '2018-01-01'
+GROUP BY m.genre;
