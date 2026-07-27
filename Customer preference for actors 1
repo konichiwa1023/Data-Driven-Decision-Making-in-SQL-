@@ -1,0 +1,7 @@
+-- Join the tables
+SELECT *
+FROM renting AS r
+LEFT JOIN actsin AS ai
+ON r.movie_id = ai.movie_id
+LEFT JOIN actors AS a
+ON ai.actor_id = a.actor_id;
